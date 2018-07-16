@@ -70,7 +70,7 @@ public class AddingDeckActivity extends AppCompatActivity {
 
         startActivityForResult(intent, REQUEST_EXIT);
     }
-}
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -89,7 +89,7 @@ public class AddingDeckActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
         mCancel.setOnClickListener(v -> finish());
-
+    }
 
 
     @Override
