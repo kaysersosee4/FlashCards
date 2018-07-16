@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <TextView
+        android:id="@+id/tv_deckname"
+        android:layout_width="116dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:text="@string/deck_name"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/b_edit"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/b_delete"
+        android:text="@string/edit" />
+
+    <Button
+        android:id="@+id/b_delete"
+        android:layout_width="74dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/delete" />
+
+    <TextView
+        android:id="@+id/tv_new_count"
+        android:layout_width="43dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="116dp"
+        android:gravity="center"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/tv_repeat_count"
+        android:layout_width="43dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/b_edit"
+        android:gravity="center"
+        android:text="0" />
+</RelativeLayout>

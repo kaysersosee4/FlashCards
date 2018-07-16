@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Fiszki</string>
+    <string name="fiszki">FISZKI</string>
+    <string name="add_deck">Add deck</string>
+    <string name="deck_name">deck_name</string>
+    <string name="button">Button</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="title_activity_adding_cards">AddingCardsActivity</string>
+    <string name="no_cards_to_learn"> There is no more cards to memorise for now. \n Keep on working! \n :)</string>
+    <string name="delete_confirmation">Delete Confirmation</string>
+</resources>

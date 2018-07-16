@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LearningFromDeckActivity">
+
+    <TextView
+        android:id="@+id/tv_przod"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="57dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tv_tyl"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_przod"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/b_trudne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="131dp"
+        android:layout_marginStart="11dp"
+        android:text="Trudne" />
+
+    <Button
+        android:id="@+id/b_srednie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/b_trudne"
+        android:layout_centerHorizontal="true"
+        android:text="Średnie" />
+
+    <Button
+        android:id="@+id/b_latwe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/b_trudne"
+        android:layout_marginEnd="21dp"
+        android:text="Łatwe" />
+
+    <Button
+        android:id="@+id/b_pokaz_odpowiedz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="166dp"
+        android:text="Pokaż Odpowiedź" />
+
+    <Button
+        android:id="@+id/b_powrot"
+        android:layout_width="209dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="55dp"
+        android:text="Powrót" />
+
+    <TextView
+        android:id="@+id/tv_info_tv"
+        android:layout_width="match_parent"
+        android:layout_height="184dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_przod"
+        android:textAlignment="center"
+        android:text="TextView" />
+</RelativeLayout>
