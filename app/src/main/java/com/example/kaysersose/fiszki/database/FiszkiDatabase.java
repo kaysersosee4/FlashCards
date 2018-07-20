@@ -12,13 +12,15 @@ import com.example.kaysersose.fiszki.database.entities.Deck;
 import com.example.kaysersose.fiszki.database.entities.FlashCard;
 import com.example.kaysersose.fiszki.utils.Converters;
 
+import java.io.Serializable;
+
 /**
  * Created by Kayser Sose on 2018-06-29.
  */
 
 @Database(entities = {Deck.class, FlashCard.class}, version=2)
 @TypeConverters(Converters.class)
-public abstract class FiszkiDatabase extends RoomDatabase {
+public abstract class FiszkiDatabase extends RoomDatabase implements Serializable{
     private static FiszkiDatabase INSTANCE;
 
 

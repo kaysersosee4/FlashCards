@@ -1,4 +1,4 @@
-package com.example.kaysersose.fiszki;
+package com.example.kaysersose.fiszki.learning;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.kaysersose.fiszki.R;
 import com.example.kaysersose.fiszki.database.FiszkiDatabase;
 import com.example.kaysersose.fiszki.database.entities.FlashCard;
 
@@ -14,6 +15,8 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import io.reactivex.Completable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
@@ -21,11 +24,26 @@ import io.reactivex.schedulers.Schedulers;
 import static android.view.View.VISIBLE;
 
 public class LearningFromDeckActivity extends AppCompatActivity {
-    TextView mPrzod, mTyl, mInfo;
-    Button mLatwe, mSrednie, mTrudne, mPokazOdpowiedz, mPowrot;
+    @BindView(R.id.tv_przod)
+    TextView mPrzod;
+    @BindView(R.id.tv_tyl)
+    TextView mTyl;
+    @BindView(R.id.tv_info_tv)
+    TextView mInfo;
+
+    @BindView(R.id.b_latwe)
+    Button mLatwe;
+    @BindView(R.id.b_srednie)
+    Button mSrednie;
+    @BindView(R.id.b_trudne)
+    Button mTrudne;
+    @BindView(R.id.b_pokaz_odpowiedz)
+    Button mPokazOdpowiedz;
+    @BindView(R.id.b_powrot)
+    Button mPowrot;
+
     List<FlashCard> cards;
     FiszkiDatabase db;
-
 
 
     @SuppressLint("CheckResult")
@@ -34,23 +52,16 @@ public class LearningFromDeckActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learning_drom_deck);
 
-        mPrzod = findViewById(R.id.tv_przod);
-        mTyl = findViewById(R.id.tv_tyl);
-        mInfo = findViewById(R.id.tv_info_tv);
+        ButterKnife.bind(this);
 
-        mLatwe = findViewById(R.id.b_latwe);
         mLatwe.setOnClickListener(v -> onEasyButtonClicked());
 
-        mSrednie = findViewById(R.id.b_srednie);
         mSrednie.setOnClickListener(v -> onMediumButtonClicked());
 
-        mTrudne = findViewById(R.id.b_trudne);
         mTrudne.setOnClickListener(v -> onHardButtonClicked());
 
-        mPokazOdpowiedz = findViewById(R.id.b_pokaz_odpowiedz);
         mPokazOdpowiedz.setOnClickListener(v -> showReverse());
 
-        mPowrot = findViewById(R.id.b_powrot);
         mPowrot.setOnClickListener(v -> finish());
 
         hideAll();

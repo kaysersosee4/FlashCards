@@ -1,4 +1,4 @@
-package com.example.kaysersose.fiszki;
+package com.example.kaysersose.fiszki.app;
 
 import android.app.Application;
 

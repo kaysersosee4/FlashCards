@@ -46,4 +46,7 @@ public interface FlashCardDao {
 
     @Query("SELECT * FROM flashcards WHERE deckId = :deckID AND (daysToNextRevision=0 OR :currentDate-lastRevision>86400000*daysToNextRevision)")
     Flowable<List<FlashCard>> getLearningCardsFromDeck(int deckID, Date currentDate);
+
+    @Query("SELECT * FROM flashcards WHERE id=:cardId")
+    Single<FlashCard> getCard(int cardId);
 }

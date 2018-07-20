@@ -1,4 +1,4 @@
-package com.example.kaysersose.fiszki;
+package com.example.kaysersose.fiszki.home;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -13,6 +13,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.kaysersose.fiszki.editingdeck.EditingDeckActivity;
+import com.example.kaysersose.fiszki.learning.LearningFromDeckActivity;
+import com.example.kaysersose.fiszki.R;
 import com.example.kaysersose.fiszki.database.FiszkiDatabase;
 import com.example.kaysersose.fiszki.database.entities.Deck;
 
@@ -73,8 +76,11 @@ public class DeckListAdapter extends RecyclerView.Adapter<DeckListAdapter.MyView
         }
 
         @OnClick(R.id.b_edit)
-        public void startEditDeckActivity(){
+        public void startEditDeckActivity(View v){
+            Intent intent = new Intent(v.getContext(), EditingDeckActivity.class);
+            intent.putExtra("DECK_ID", deck.getId());
 
+            v.getContext().startActivity(intent);
         }
 
 

@@ -1,12 +1,19 @@
 <resources>
-    <string name="app_name">Fiszki</string>
-    <string name="fiszki">FISZKI</string>
+    <string name="app_name">Flashcards</string>
+    <string name="fiszki">FLASHCARDS</string>
     <string name="add_deck">Add deck</string>
-    <string name="deck_name">deck_name</string>
+    <string name="deck_name">Deck name</string>
     <string name="button">Button</string>
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
     <string name="title_activity_adding_cards">AddingCardsActivity</string>
     <string name="no_cards_to_learn"> There is no more cards to memorise for now. \n Keep on working! \n :)</string>
     <string name="delete_confirmation">Delete Confirmation</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_cards">Add Cards</string>
+    <string name="new_per_lesson">New Per Lesson</string>
+    <string name="on_success_message">Success!</string>
+    <string name="front">Front</string>
+    <string name="back">Back</string>
 </resources>

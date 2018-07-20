@@ -1,4 +1,4 @@
-package com.example.kaysersose.fiszki;
+package com.example.kaysersose.fiszki.home;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -8,17 +8,24 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Button;
 
+import com.example.kaysersose.fiszki.addingdeck.AddingDeckActivity;
+import com.example.kaysersose.fiszki.R;
 import com.example.kaysersose.fiszki.database.FiszkiDatabase;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
 
 public class MainActivity extends AppCompatActivity {
-    private RecyclerView mRecyclerView;
     private DeckListAdapter mAdapter;
     private FiszkiDatabase db;
-    private Button addDeck;
+
+    @BindView(R.id.b_add_deck)
+    Button addDeck;
+    @BindView(R.id.rv_decks)
+    RecyclerView mRecyclerView;
 
     @Override
     protected void onRestart() {
@@ -31,8 +38,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mRecyclerView = findViewById(R.id.rv_decks);
-        addDeck = findViewById(R.id.b_add_deck);
+        ButterKnife.bind(this);
 
         addDeck.setOnClickListener(v -> {
             Intent intent = new Intent(v.getContext(), AddingDeckActivity.class);

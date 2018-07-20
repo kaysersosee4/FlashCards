@@ -6,6 +6,7 @@ import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.Index;
 import android.arch.persistence.room.PrimaryKey;
 
+import java.io.Serializable;
 import java.util.Date;
 
 
@@ -23,7 +24,7 @@ import java.util.Date;
         indices = {@Index(name = "deckId", value="deckId")}
 
 )
-public class FlashCard {
+public class FlashCard implements Serializable{
     @PrimaryKey(autoGenerate = true)
     private int id;
     private int deckId;
